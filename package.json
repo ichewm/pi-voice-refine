@@ -1,0 +1,50 @@
+{
+  "name": "pi-voice-refine",
+  "version": "1.0.0",
+  "description": "Local voice-to-English dictation for the Pi coding agent: faithful sentence-by-sentence translation with disfluency removal. SenseVoice ASR + Ollama refine, fully offline.",
+  "keywords": [
+    "pi-package"
+  ],
+  "license": "MIT",
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "e2e": "node --experimental-strip-types scripts/e2e.ts"
+  },
+  "dependencies": {
+    "sherpa-onnx": "^1.10.6"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ichewm/pi-voice-refine.git"
+  },
+  "homepage": "https://github.com/ichewm/pi-voice-refine#readme",
+  "bugs": {
+    "url": "https://github.com/ichewm/pi-voice-refine/issues"
+  },
+  "engines": {
+    "node": ">=22.6.0"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "SPEC.md",
+    "LICENSE"
+  ]
+}
